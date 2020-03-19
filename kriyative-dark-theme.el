@@ -42,6 +42,8 @@
    `(mode-line-inactive ((t (:background ,bg-dim :foreground ,fg))))
    `(vertical-border ((t (:foreground ,fg :background ,fg))))
    `(fringe ((t (:background ,bg))))
+   `(isearch ((t (:background ,(kriyative--lighten-color fg 0.5)
+                              :foreground ,cursor))))
    `(font-lock-string-face ((t (:foreground ,str))))
    `(font-lock-comment-face ((t (:foreground ,comment))))
    `(font-lock-warning-face ((t (:foreground ,warning))))
