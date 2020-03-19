@@ -4,7 +4,7 @@
 ;; Url: https://github.com/kriyative/kriyative-emacs-themes
 ;; Package-Requires: ((emacs "24"))
 
-(require 'kriyative-theme-core)
+(require 'kriyative-emacs-themes)
 
 (deftheme kriyative-dark
   "Green text on Black background based minimalist theme")
@@ -61,12 +61,6 @@
    `(dired-mark ((t (:foreground ,keyword :weight bold))))
    `(dired-marked ((t (:foreground ,function))))
    ))
-
-;;;###autoload
-(when load-file-name
-  (add-to-list 'custom-theme-load-path
-               (file-name-as-directory
-                (file-name-directory load-file-name))))
 
 (provide-theme 'kriyative-dark)
 

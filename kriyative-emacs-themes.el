@@ -17,4 +17,10 @@
     (apply 'color-rgb-to-hex
            (mapcar (lambda (v) (+ delta v)) values))))
 
-(provide 'kriyative-theme-core)
+;;;###autoload
+(when load-file-name
+  (add-to-list 'custom-theme-load-path
+               (file-name-as-directory
+                (file-name-directory load-file-name))))
+
+(provide 'kriyative-emacs-themes)
