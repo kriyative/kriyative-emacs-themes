@@ -9,13 +9,13 @@
   (let ((values (color-name-to-rgb color))
         (delta (or delta 0.1)))
     (apply 'color-rgb-to-hex
-           (mapcar (lambda (v) (- v delta)) values))))
+           (mapcar (lambda (v) (max 0 (- v delta))) values))))
 
 (defun kriyative--lighten-color (color &optional delta)
   (let ((values (color-name-to-rgb color))
         (delta (or delta 0.1)))
     (apply 'color-rgb-to-hex
-           (mapcar (lambda (v) (+ delta v)) values))))
+           (mapcar (lambda (v) (min 1 (+ delta v))) values))))
 
 ;;;###autoload
 (when load-file-name
